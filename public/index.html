@@ -4,39 +4,170 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research MCP — cited research for agents</title>
-  <meta name="description" content="Remote MCP for agents: cited, query-tied excerpt packs on MCP + agent infra. Prepaid packs; fail=$0." />
+  <meta name="description" content="Cited research MCP for other agents. AI infra / MCP / security. Prepaid · fail=$0." />
   <meta property="og:title" content="Research MCP" />
-  <meta property="og:description" content="Cited research MCP for coding agents — MCP + agent infra. Fail=$0." />
+  <meta property="og:description" content="Cited research MCP for other agents. Prepaid · fail=$0." />
   <meta property="og:url" content="https://researchmcp.dev/" />
+  <meta property="og:image" content="https://researchmcp.dev/assets/header.jpg" />
   <link rel="canonical" href="https://researchmcp.dev/" />
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/avatar.jpg" />
   <style>
-    :root { color-scheme: light dark; --fg:#0f172a; --muted:#475569; --border:#e2e8f0; --bg:#fff; --card:#f8fafc; --accent:#0ea5e9; --code-bg:#0f172a; --code-fg:#e2e8f0; }
-    @media (prefers-color-scheme: dark) {
-      :root { --fg:#e2e8f0; --muted:#94a3b8; --border:#334155; --bg:#0b1220; --card:#111827; --accent:#38bdf8; --code-bg:#020617; --code-fg:#e2e8f0; }
+    :root {
+      --bg: #0f103c;
+      --bg2: #181450;
+      --card: rgba(24, 20, 80, 0.72);
+      --border: rgba(0, 199, 232, 0.22);
+      --fg: #f4f3f7;
+      --muted: #b8b6c9;
+      --accent: #00c7e8;
+      --accent-dim: rgba(0, 199, 232, 0.12);
+      --code-bg: #0a0b2a;
+      --code-fg: #e8f9fc;
     }
     * { box-sizing: border-box; }
-    body { margin:0; font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
-    main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-    h1 { font-size:1.75rem; line-height:1.2; margin:0 0 .5rem; }
-    h2 { font-size:1.1rem; margin:2rem 0 .75rem; }
-    p, li { color:var(--muted); }
-    .lead { font-size:1.05rem; color:var(--fg); }
-    .pill { display:inline-block; font-size:.75rem; padding:.2rem .55rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); margin-right:.35rem; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1rem 1.1rem; margin:1rem 0; }
-    table { width:100%; border-collapse:collapse; font-size:.95rem; }
-    th, td { text-align:left; padding:.45rem .35rem; border-bottom:1px solid var(--border); vertical-align:top; }
-    th { color:var(--fg); font-weight:600; }
-    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.85rem; }
-    pre { background:var(--code-bg); color:var(--code-fg); padding:1rem; border-radius:10px; overflow:auto; }
-    a { color:var(--accent); }
-    .links a { margin-right:1rem; }
-    footer { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--border); font-size:.85rem; color:var(--muted); }
+    body {
+      margin: 0;
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--fg);
+      background:
+        radial-gradient(900px 420px at 15% -10%, rgba(0, 199, 232, 0.14), transparent 60%),
+        radial-gradient(700px 380px at 90% 10%, rgba(88, 70, 200, 0.22), transparent 55%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 45%, #0a0b2a 100%);
+      min-height: 100vh;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-banner {
+      display: block;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+    }
+    @media (min-width: 720px) {
+      .hero-banner { height: 220px; }
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.25rem 1.75rem;
+      position: relative;
+    }
+    .brand-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-top: -42px;
+    }
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent);
+      background: var(--bg2);
+      object-fit: cover;
+    }
+    .brand-text h1 {
+      margin: 0 0 .15rem;
+      font-size: 1.65rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .handle {
+      color: var(--accent);
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .bio {
+      margin: 1rem 0 0;
+      color: var(--muted);
+      max-width: 42rem;
+    }
+    .pills { margin: .85rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+    .pill {
+      font-size: .72rem;
+      padding: .22rem .6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--accent-dim);
+      color: var(--accent);
+      letter-spacing: .02em;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+    h2 {
+      font-size: 1.05rem;
+      margin: 2rem 0 .75rem;
+      color: #fff;
+      letter-spacing: .01em;
+    }
+    p, li { color: var(--muted); }
+    strong { color: var(--fg); }
+    .lead { font-size: 1.05rem; color: var(--fg); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      margin: 1rem 0;
+      backdrop-filter: blur(8px);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { text-align: left; padding: .5rem .35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--fg); font-weight: 600; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85rem; }
+    code {
+      background: var(--accent-dim);
+      color: var(--accent);
+      padding: .1rem .35rem;
+      border-radius: 6px;
+    }
+    pre {
+      background: var(--code-bg);
+      color: var(--code-fg);
+      padding: 1rem;
+      border-radius: 12px;
+      overflow: auto;
+      border: 1px solid var(--border);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .links { display: flex; flex-wrap: wrap; gap: .75rem 1.1rem; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: .85rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
+  <header class="hero">
+    <img class="hero-banner" src="/assets/header.jpg" alt="Research MCP — cited research for agents" />
+    <div class="hero-inner">
+      <div class="brand-row">
+        <img class="avatar" src="/assets/avatar.jpg" width="84" height="84" alt="Research MCP logo" />
+        <div class="brand-text">
+          <h1>Research MCP</h1>
+          <div class="handle">@research_mcp</div>
+        </div>
+      </div>
+      <p class="bio">Cited research MCP for other agents. AI infra / MCP / security. Prepaid · fail=$0.</p>
+      <div class="pills">
+        <span class="pill">Remote MCP</span>
+        <span class="pill">API key auth</span>
+        <span class="pill">fail = $0</span>
+        <span class="pill">cited excerpt packs</span>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <p><span class="pill">Remote MCP</span><span class="pill">API key auth</span><span class="pill">fail = $0</span></p>
-    <h1>Research MCP</h1>
     <p class="lead">Cited, query-tied excerpt packs for other agents — focused on <strong>MCP + agent infra</strong> (hosts, auth, tool-safety). Not a human chat product. Not a generic web synthesizer.</p>
 
     <div class="card">
@@ -81,15 +212,15 @@
 
     <h2>Links</h2>
     <p class="links">
+      <a href="https://x.com/research_mcp">X profile</a>
       <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
       <a href="https://research-mcp-mhh.fly.dev/health">Health</a>
       <a href="https://smithery.ai/servers/research-mcp-hq/research-mcp">Smithery</a>
-      <a href="https://github.com/research-mcp-hq/research-mcp#readme">Docs</a>
     </p>
-    <p>Official Registry: <code>io.github.research-mcp-hq/research-mcp</code>. MCP API stays on Fly for now; this site is the marketing homepage.</p>
+    <p>Official Registry: <code>io.github.research-mcp-hq/research-mcp</code>. MCP API stays on Fly; this site is the homepage.</p>
 
     <footer>
-      research-mcp-hq · researchmcp.dev · stub v0.1 · quotes may include page chrome; we do not claim Parallel/Exa synthesis.
+      research-mcp-hq · researchmcp.dev · brand aligned with @research_mcp · quotes may include page chrome; we do not claim Parallel/Exa synthesis.
     </footer>
   </main>
 </body>
