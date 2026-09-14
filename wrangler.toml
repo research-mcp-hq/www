@@ -1,5 +1,5 @@
 # Static site for researchmcp.dev (Cloudflare Workers static assets / Pages)
-name = "researchmcp"
+name = "researchmcpv1"
 compatibility_date = "2024-09-23"
 
 [assets]
