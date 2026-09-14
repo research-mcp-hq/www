@@ -11,8 +11,7 @@ Billable only when density + confidence bar AND quotes verify on each claim's so
 Miss the quote gate → $0 (meta.billable=false).
 
 ## MCP endpoint
-# TODO after DNS: https://mcp.researchmcp.dev/mcp
-https://research-mcp-mhh.fly.dev/mcp
+https://mcp.researchmcp.dev/mcp
 
 Auth: Authorization: Bearer <api_key>  OR  X-API-Key: <api_key>
 
@@ -70,7 +69,7 @@ Quotes may include page chrome. We do not claim Parallel/Exa synthesis as the li
 {
   "mcpServers": {
     "research-mcp": {
-      "url": "https://research-mcp-mhh.fly.dev/mcp",
+      "url": "https://mcp.researchmcp.dev/mcp",
       "headers": { "Authorization": "Bearer YOUR_API_KEY" }
     }
   }

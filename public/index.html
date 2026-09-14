@@ -176,7 +176,7 @@
     </div>
 
     <h2 id="install">Install</h2>
-    <p class="muted">MCP endpoint (Fly until subdomain exists). <!-- TODO: switch to https://mcp.researchmcp.dev/mcp after DNS --></p>
+    <p class="muted">MCP endpoint. <!-- MCP on mcp.researchmcp.dev --></p>
     <div class="card copy-wrap" data-tabs>
       <div class="tabs">
         <button type="button" class="tab active" data-tab="tab-cursor">Cursor</button>
@@ -187,7 +187,7 @@
         <pre id="cursor-snippet">{
   "mcpServers": {
     "research-mcp": {
-      "url": "https://research-mcp-mhh.fly.dev/mcp",
+      "url": "https://mcp.researchmcp.dev/mcp",
       "headers": {
         "Authorization": "Bearer YOUR_API_KEY"
       }
@@ -198,7 +198,7 @@
       <div id="tab-claude" class="panel">
         <button type="button" class="copy-btn" data-copy="#claude-snippet">Copy</button>
         <pre id="claude-snippet"># MCP endpoint
-https://research-mcp-mhh.fly.dev/mcp
+https://mcp.researchmcp.dev/mcp
 
 # Auth (either header)
 Authorization: Bearer YOUR_API_KEY

@@ -13,8 +13,8 @@
 - Happy example: https://researchmcp.dev/docs/contract/examples/happy-research-brief.json
 - FAIL example: https://researchmcp.dev/docs/contract/examples/fail-gate.json
 - Server card: https://researchmcp.dev/.well-known/mcp/server-card.json
-- MCP endpoint: https://research-mcp-mhh.fly.dev/mcp
-- Health: https://research-mcp-mhh.fly.dev/health
+- MCP endpoint: https://mcp.researchmcp.dev/mcp
+- Health: https://mcp.researchmcp.dev/health
 - GitHub: https://github.com/research-mcp-hq/research-mcp
 - X: https://x.com/research_mcp
 
