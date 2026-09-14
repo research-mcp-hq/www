@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://research-mcp-mhh.fly.dev/docs/contract/schema.json",
+  "$id": "https://mcp.researchmcp.dev/docs/contract/schema.json",
   "title": "research-mcp published contract",
   "description": "Tool I/O, shared envelope, and errors. schema_version constant: 2026-09-14.",
   "definitions": {

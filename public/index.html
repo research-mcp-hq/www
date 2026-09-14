@@ -37,6 +37,7 @@
 
   <main class="wrap">
     <section class="hero">
+      <h1>Research MCP</h1>
       <p class="pitch">Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety. Miss the quote gate → <strong>$0</strong>.</p>
       <p class="subpitch">Remote MCP for other agents — not a human chat product, not a generic web synthesizer. Live path: search → fetch → quote gate. Billable only when density + confidence bar and quotes verify on each claim’s <code>source_url</code>.</p>
       <div class="cta-row">
@@ -95,6 +96,7 @@
         <p class="note"><a href="/docs/contract/examples/fail-gate.json">Full FAIL JSON</a></p>
       </div>
     </div>
+    <p class="muted">Contract fixtures. Happy is mode: golden. FAIL is a refused live-shaped envelope.</p>
 
     <h2>Density bar</h2>
     <div class="density">
@@ -143,21 +145,21 @@
       <div class="card price-card">
         <h3>Starter</h3>
         <div class="amt">$10</div>
-        <p style="margin:0">1000¢ prepaid · ~40 lite or ~16 standard successful calls</p>
+        <p style="margin:0">1000¢ prepaid · ~40 lite or ~16 standard</p>
         <!-- BUY_STARTER_URL -->
         <p class="note"><a href="https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00">Buy starter →</a></p>
       </div>
       <div class="card price-card">
         <h3>Standard pack</h3>
         <div class="amt">$25</div>
-        <p style="margin:0">2500¢ prepaid</p>
+        <p style="margin:0">2500¢ prepaid · ~100 lite or ~41 standard</p>
         <!-- BUY_STANDARD_URL -->
         <p class="note"><a href="https://buy.stripe.com/14A00k5xYgY74H32np3AY01">Buy standard →</a></p>
       </div>
       <div class="card price-card">
         <h3>Pro</h3>
         <div class="amt">$50</div>
-        <p style="margin:0">5000¢ prepaid</p>
+        <p style="margin:0">5000¢ prepaid · ~200 lite or ~83 standard</p>
         <!-- BUY_PRO_URL -->
         <p class="note"><a href="https://buy.stripe.com/fZu3cwd0qcHR7Tf4vx3AY02">Buy pro →</a></p>
       </div>
@@ -169,14 +171,14 @@
           <tr><td>Lite (<code>source_lookup</code> / quick brief)</td><td>$0.25 / successful call</td></tr>
           <tr><td>Standard brief</td><td>$0.60</td></tr>
           <tr><td>Quality / quote-gate fail</td><td><strong>$0</strong></td></tr>
-          <tr><td>Deep</td><td><span class="badge badge-warn">preview · $0 · flag required</span> — not a live billed SKU</td></tr>
         </tbody>
       </table>
       <p class="note">Packs credit 1000 / 2500 / 5000¢. Inspect balance: <code>GET /billing/credits</code>. Full table on <a href="/pricing/">Pricing</a>.</p>
     </div>
 
     <h2 id="install">Install</h2>
-    <p class="muted">MCP endpoint. <!-- MCP on mcp.researchmcp.dev --></p>
+    <p class="muted">Get a key in 3 steps: <strong>1)</strong> pay on Pricing → <strong>2)</strong> copy the key on the success page → <strong>3)</strong> paste it into the install JSON below.</p>
+    <p class="muted">MCP endpoint: <code>https://mcp.researchmcp.dev/mcp</code></p>
     <div class="card copy-wrap" data-tabs>
       <div class="tabs">
         <button type="button" class="tab active" data-tab="tab-cursor">Cursor</button>

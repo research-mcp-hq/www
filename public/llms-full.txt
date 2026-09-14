@@ -19,7 +19,7 @@ Auth: Authorization: Bearer <api_key>  OR  X-API-Key: <api_key>
 - starter $10 / 1000¢: https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00
 - standard $25 / 2500¢: https://buy.stripe.com/14A00k5xYgY74H32np3AY01
 - pro $50 / 5000¢: https://buy.stripe.com/fZu3cwd0qcHR7Tf4vx3AY02
-Success: Stripe → Fly /billing/success (one-time key reveal).
+Success: Stripe → https://mcp.researchmcp.dev/billing/success (one-time key reveal).
 Also: POST /billing/checkout {"pack":"starter"|"standard"|"pro"}
 Balance: GET /billing/credits
 
