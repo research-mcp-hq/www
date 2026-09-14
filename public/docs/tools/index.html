@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools — Research MCP</title>
+  <meta name="description" content="When to call research_brief and source_lookup; when not to call compare_options or depth=deep." />
+  <link rel="canonical" href="https://researchmcp.dev/docs/tools/" />
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+  <link rel="describedby" href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/schema.json" />
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/" aria-label="Research MCP home" style="display:flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none">
+          <img src="/assets/avatar.jpg" width="36" height="36" alt="Research MCP logo" />
+          <span class="brand-name">Research MCP</span>
+        </a>
+        <a class="brand-handle" href="https://x.com/research_mcp">@research_mcp</a>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/docs/">Contract</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
+        <a href="/pricing/#buy">Get key</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1>Tools — when to call / when not</h1>
+    <p class="lead">From <a href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/TOOLS.md">TOOLS.md</a> · schema_version <strong>2026-09-14</strong></p>
+
+    <div class="card">
+      <h2 style="margin-top:0"><code>research_brief</code> <span class="badge badge-ok">live</span></h2>
+      <p><strong>Call when</strong> you need cited, query-tied excerpt packs on AI infra, MCP, or security (hosts, auth, tool-safety).</p>
+      <p><strong>Use</strong> <code>depth=quick</code> ($0.25) or <code>depth=standard</code> ($0.60).</p>
+      <p><strong>Do not</strong> call with <code>depth=deep</code> unless <code>ENABLE_PREVIEW_TOOLS=1</code> (preview, always $0).</p>
+      <p>If quotes fail verification on <code>source_url</code>, refused and <strong>not billed</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0"><code>source_lookup</code> <span class="badge badge-ok">live</span></h2>
+      <p><strong>Call when</strong> you have one URL or claim to fetch/verify. Lite $0.25. Same cited envelope.</p>
+      <p><strong>Do not</strong> use as open-web search or multi-source synthesis.</p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0"><code>compare_options</code> <span class="badge badge-warn">preview / $0 / do not call</span></h2>
+      <p><strong>Do not call yet</strong> — no live path (golden-only). Use <code>research_brief</code> instead.</p>
+      <p>Registered only when <code>ENABLE_PREVIEW_TOOLS=1</code>; always <code>billable=false</code> / $0; never soft-reserves full SKU.</p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0"><code>depth=deep</code> <span class="badge badge-warn">preview · $0 · flag required</span></h2>
+      <p>Parked. With preview flag: allowed but always $0. Without flag: not in inputSchema / <code>preview_required</code> error.</p>
+    </div>
+
+    <h2>Density bars</h2>
+    <table>
+      <thead><tr><th>depth</th><th>Sources</th></tr></thead>
+      <tbody>
+        <tr><td><code>quick</code></td><td>≥2 unique, ≥1 primary</td></tr>
+        <tr><td><code>standard</code></td><td>≥4 unique, ≥2 primary</td></tr>
+        <tr><td><code>deep</code> (preview)</td><td>≥6 unique, ≥3 primary + counter-arguments + gaps</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note"><a href="/docs/">← Contract</a> · <a href="/">Home</a></p>
+    <footer class="site-footer">
+      <div class="links">
+        <a href="/pricing/">Pricing</a>
+        <a href="/legal/">Legal</a>
+        <a href="/llms.txt">llms.txt</a>
+      </div>
+    </footer>
+  </main>
+  <script src="/js/site.js"></script>
+</body>
+</html>

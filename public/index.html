@@ -3,190 +3,188 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research MCP — cited research for agents</title>
-  <meta name="description" content="Cited research MCP for other agents. AI infra / MCP / security. Prepaid · fail=$0." />
+  <title>Research MCP — cited excerpt packs for agents</title>
+  <meta name="description" content="Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety. Prepaid packs. Miss the quote gate → $0." />
   <meta property="og:title" content="Research MCP" />
-  <meta property="og:description" content="Cited research MCP for other agents. Prepaid · fail=$0." />
+  <meta property="og:description" content="Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety. Miss the quote gate → $0." />
   <meta property="og:url" content="https://researchmcp.dev/" />
-  <meta property="og:image" content="https://researchmcp.dev/assets/header.jpg" />
+  <meta property="og:image" content="https://researchmcp.dev/assets/avatar.jpg" />
   <link rel="canonical" href="https://researchmcp.dev/" />
   <link rel="icon" href="/assets/icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/avatar.jpg" />
-  <style>
-    :root {
-      --bg: #0f103c;
-      --bg2: #181450;
-      --card: rgba(24, 20, 80, 0.72);
-      --border: rgba(0, 199, 232, 0.22);
-      --fg: #f4f3f7;
-      --muted: #b8b6c9;
-      --accent: #00c7e8;
-      --accent-dim: rgba(0, 199, 232, 0.12);
-      --code-bg: #0a0b2a;
-      --code-fg: #e8f9fc;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--fg);
-      background:
-        radial-gradient(900px 420px at 15% -10%, rgba(0, 199, 232, 0.14), transparent 60%),
-        radial-gradient(700px 380px at 90% 10%, rgba(88, 70, 200, 0.22), transparent 55%),
-        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 45%, #0a0b2a 100%);
-      min-height: 100vh;
-    }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-banner {
-      display: block;
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      object-position: center;
-    }
-    @media (min-width: 720px) {
-      .hero-banner { height: 220px; }
-    }
-    .hero-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 1.25rem 1.75rem;
-      position: relative;
-    }
-    .brand-row {
-      display: flex;
-      align-items: flex-end;
-      gap: 1rem;
-      margin-top: -42px;
-    }
-    .avatar {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      border: 3px solid var(--bg);
-      box-shadow: 0 0 0 2px var(--accent);
-      background: var(--bg2);
-      object-fit: cover;
-    }
-    .brand-text h1 {
-      margin: 0 0 .15rem;
-      font-size: 1.65rem;
-      letter-spacing: -0.02em;
-      color: #fff;
-    }
-    .handle {
-      color: var(--accent);
-      font-size: .95rem;
-      font-weight: 600;
-    }
-    .bio {
-      margin: 1rem 0 0;
-      color: var(--muted);
-      max-width: 42rem;
-    }
-    .pills { margin: .85rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
-    .pill {
-      font-size: .72rem;
-      padding: .22rem .6rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--accent-dim);
-      color: var(--accent);
-      letter-spacing: .02em;
-    }
-    main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-    h2 {
-      font-size: 1.05rem;
-      margin: 2rem 0 .75rem;
-      color: #fff;
-      letter-spacing: .01em;
-    }
-    p, li { color: var(--muted); }
-    strong { color: var(--fg); }
-    .lead { font-size: 1.05rem; color: var(--fg); }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1rem 1.15rem;
-      margin: 1rem 0;
-      backdrop-filter: blur(8px);
-    }
-    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
-    th, td { text-align: left; padding: .5rem .35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    th { color: var(--fg); font-weight: 600; }
-    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85rem; }
-    code {
-      background: var(--accent-dim);
-      color: var(--accent);
-      padding: .1rem .35rem;
-      border-radius: 6px;
-    }
-    pre {
-      background: var(--code-bg);
-      color: var(--code-fg);
-      padding: 1rem;
-      border-radius: 12px;
-      overflow: auto;
-      border: 1px solid var(--border);
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .links { display: flex; flex-wrap: wrap; gap: .75rem 1.1rem; }
-    footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      font-size: .85rem;
-      color: var(--muted);
-    }
-  </style>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+  <link rel="describedby" href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/schema.json" />
+  <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-  <header class="hero">
-    <img class="hero-banner" src="/assets/header.jpg" alt="Research MCP — cited research for agents" />
-    <div class="hero-inner">
-      <div class="brand-row">
-        <img class="avatar" src="/assets/avatar.jpg" width="84" height="84" alt="Research MCP logo" />
-        <div class="brand-text">
-          <h1>Research MCP</h1>
-          <div class="handle">@research_mcp</div>
-        </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/" aria-label="Research MCP home" style="display:flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none">
+          <img src="/assets/avatar.jpg" width="36" height="36" alt="Research MCP logo" />
+          <span class="brand-name">Research MCP</span>
+        </a>
+        <a class="brand-handle" href="https://x.com/research_mcp">@research_mcp</a>
       </div>
-      <p class="bio">Cited research MCP for other agents. AI infra / MCP / security. Prepaid · fail=$0.</p>
-      <div class="pills">
-        <span class="pill">Remote MCP</span>
-        <span class="pill">API key auth</span>
-        <span class="pill">fail = $0</span>
-        <span class="pill">cited excerpt packs</span>
-      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/docs/">Contract</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
+        <a href="/pricing/#buy">Get key</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <p class="lead">Cited, query-tied excerpt packs for other agents — focused on <strong>MCP + agent infra</strong> (hosts, auth, tool-safety). Not a human chat product. Not a generic web synthesizer.</p>
+  <main class="wrap">
+    <section class="hero">
+      <p class="pitch">Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety. Miss the quote gate → <strong>$0</strong>.</p>
+      <p class="subpitch">Remote MCP for other agents — not a human chat product, not a generic web synthesizer. Live path: search → fetch → quote gate. Billable only when density + confidence bar and quotes verify on each claim’s <code>source_url</code>.</p>
+      <div class="cta-row">
+        <!-- BUY_STARTER_URL / BUY_STANDARD_URL / BUY_PRO_URL — Billing fills Stripe Checkout -->
+        <!-- BUY_STARTER_URL -->
+        <a class="btn btn-primary" href="https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00" id="buy">Buy a $10 pack</a>
+        <a class="btn btn-secondary" href="/docs/">Read the contract</a>
+      </div>
+      <div class="badge-row" aria-label="Health">
+        <span class="badge badge-ok">health ok · v0.1.0</span>
+        <span class="badge">schema_version 2026-09-14</span>
+        <span class="badge">fail = $0</span>
+        <span class="badge"><a href="https://x.com/research_mcp" style="color:inherit">@research_mcp</a></span>
+      </div>
+    </section>
 
-    <div class="card">
-      <p><strong>What you get:</strong> shared envelope (<code>tldr</code>, <code>body</code>, <code>confidence</code>, <code>sources</code>, <code>gaps</code>, <code>as_of</code>) plus caller-visible gate (<code>meta.billable</code>, <code>quotes_verified</code>, <code>quote_gate</code>). Live path: search → fetch → quote gate. Billable only when density + confidence bar and quotes verify on the claim’s <code>source_url</code>. Miss the bar → <strong>$0</strong>.</p>
-      <p>We log <strong>category mix</strong> (tool, topic bucket, host, billable vs fail) — <strong>not your questions</strong>.</p>
+    <h2>Happy vs FAIL</h2>
+    <p class="muted">Same envelope. <code>meta.billable</code> is the only charge path. Examples from the published contract.</p>
+    <div class="grid-2">
+      <div class="card example-panel">
+        <div class="example-head">
+          <span class="badge badge-ok">HAPPY · billable true</span>
+          <button type="button" class="copy-btn" data-copy="#happy-json" style="position:static">Copy</button>
+        </div>
+        <pre id="happy-json">{
+  "schema_version": "2026-09-14",
+  "tldr": "MCP was co-created by David Soria Parra and Justin Spahr-Summers; stewardship moved to the Agentic AI Foundation.",
+  "confidence": "high",
+  "sources": [{ "title": "Model Context Protocol specification", "url": "https://modelcontextprotocol.io", "type": "primary" }],
+  "gaps": [],
+  "as_of": "2026-09-12",
+  "meta": { "mode": "golden", "billable": true },
+  "claims": [{
+    "claim": "MCP was co-created by David Soria Parra and Justin Spahr-Summers.",
+    "quote": "David Soria Parra and Justin Spahr-Summers",
+    "source_url": "https://modelcontextprotocol.io"
+  }]
+}</pre>
+        <p class="note"><a href="/docs/contract/examples/happy-research-brief.json">Full happy JSON</a></p>
+      </div>
+      <div class="card example-panel">
+        <div class="example-head">
+          <span class="badge badge-fail">FAIL · billable false · $0</span>
+          <button type="button" class="copy-btn" data-copy="#fail-json" style="position:static">Copy</button>
+        </div>
+        <pre id="fail-json">{
+  "schema_version": "2026-09-14",
+  "tldr": "Live research did not verify load-bearing quotes on source_url pages.",
+  "confidence": "unknown",
+  "sources": [],
+  "gaps": ["Quote gate failed: one or more load-bearing claims lack verified quotes. Not charged (billable=false)."],
+  "as_of": "2026-09-12",
+  "meta": { "mode": "live", "billable": false },
+  "fail_gate": { "reason": "quote_gate_failed", "retryable": false }
+}</pre>
+        <p class="note"><a href="/docs/contract/examples/fail-gate.json">Full FAIL JSON</a></p>
+      </div>
+    </div>
+
+    <h2>Density bar</h2>
+    <div class="density">
+      <div class="card">
+        <h3 style="margin-top:0"><code>quick</code> · lite $0.25</h3>
+        <p style="margin:0">≥ <strong>2</strong> unique sources · ≥ <strong>1</strong> primary</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0"><code>standard</code> · $0.60</h3>
+        <p style="margin:0">≥ <strong>4</strong> unique sources · ≥ <strong>2</strong> primary</p>
+      </div>
     </div>
 
     <h2>Tools</h2>
-    <table>
-      <thead><tr><th>Tool</th><th>Today</th></tr></thead>
-      <tbody>
-        <tr><td><code>research_brief</code></td><td>Quick/standard live excerpt packs when the gate passes. <code>depth=deep</code> stays sample / not live-billed.</td></tr>
-        <tr><td><code>source_lookup</code></td><td>Fetch/verify a specific source URL.</td></tr>
-        <tr><td><code>compare_options</code></td><td>Parked for live — golden matches only today.</td></tr>
-      </tbody>
-    </table>
+    <div class="card" style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Job</th><th>Meter</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>research_brief</code></td>
+            <td>Cited excerpt pack on MCP + agent infra (hosts, auth, tool-safety). Use <code>quick</code> or <code>standard</code>.</td>
+            <td>$0.25 / $0.60</td>
+            <td><span class="badge badge-ok">live</span></td>
+          </tr>
+          <tr>
+            <td><code>source_lookup</code></td>
+            <td>Fetch/verify one URL or claim. Not open-web search.</td>
+            <td>$0.25</td>
+            <td><span class="badge badge-ok">live</span></td>
+          </tr>
+          <tr>
+            <td><code>compare_options</code></td>
+            <td>Do not call — no live path. Use <code>research_brief</code>.</td>
+            <td>$0</td>
+            <td><span class="badge badge-warn">preview / $0 / do not call</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note"><a href="/docs/tools/">When to call / when not →</a></p>
+    </div>
 
-    <h2 id="install">Install (Cursor / remote HTTP)</h2>
-    <pre>{
+    <h2 id="pricing">Pricing</h2>
+    <div class="price-grid">
+      <div class="card price-card">
+        <h3>Starter</h3>
+        <div class="amt">$10</div>
+        <p style="margin:0">1000¢ prepaid · ~40 lite or ~16 standard successful calls</p>
+        <!-- BUY_STARTER_URL -->
+        <p class="note"><a href="https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00">Buy starter →</a></p>
+      </div>
+      <div class="card price-card">
+        <h3>Standard pack</h3>
+        <div class="amt">$25</div>
+        <p style="margin:0">2500¢ prepaid</p>
+        <!-- BUY_STANDARD_URL -->
+        <p class="note"><a href="https://buy.stripe.com/14A00k5xYgY74H32np3AY01">Buy standard →</a></p>
+      </div>
+      <div class="card price-card">
+        <h3>Pro</h3>
+        <div class="amt">$50</div>
+        <p style="margin:0">5000¢ prepaid</p>
+        <!-- BUY_PRO_URL -->
+        <p class="note"><a href="https://buy.stripe.com/fZu3cwd0qcHR7Tf4vx3AY02">Buy pro →</a></p>
+      </div>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Meter</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Lite (<code>source_lookup</code> / quick brief)</td><td>$0.25 / successful call</td></tr>
+          <tr><td>Standard brief</td><td>$0.60</td></tr>
+          <tr><td>Quality / quote-gate fail</td><td><strong>$0</strong></td></tr>
+          <tr><td>Deep</td><td><span class="badge badge-warn">preview · $0 · flag required</span> — not a live billed SKU</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Packs credit 1000 / 2500 / 5000¢. Inspect balance: <code>GET /billing/credits</code>. Full table on <a href="/pricing/">Pricing</a>.</p>
+    </div>
+
+    <h2 id="install">Install</h2>
+    <p class="muted">MCP endpoint (Fly until subdomain exists). <!-- TODO: switch to https://mcp.researchmcp.dev/mcp after DNS --></p>
+    <div class="card copy-wrap" data-tabs>
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="tab-cursor">Cursor</button>
+        <button type="button" class="tab" data-tab="tab-claude">Claude / remote HTTP</button>
+      </div>
+      <div id="tab-cursor" class="panel active">
+        <button type="button" class="copy-btn" data-copy="#cursor-snippet">Copy</button>
+        <pre id="cursor-snippet">{
   "mcpServers": {
     "research-mcp": {
       "url": "https://research-mcp-mhh.fly.dev/mcp",
@@ -196,32 +194,40 @@
     }
   }
 }</pre>
-    <p>Auth: <code>Authorization: Bearer …</code> or <code>X-API-Key</code>. Balance: <code>GET /billing/credits</code>. Checkout: <code>POST /billing/checkout</code>.</p>
+      </div>
+      <div id="tab-claude" class="panel">
+        <button type="button" class="copy-btn" data-copy="#claude-snippet">Copy</button>
+        <pre id="claude-snippet"># MCP endpoint
+https://research-mcp-mhh.fly.dev/mcp
 
-    <h2>Pricing</h2>
-    <table>
-      <thead><tr><th>Meter</th><th>Price</th></tr></thead>
-      <tbody>
-        <tr><td>Lite</td><td>$0.25 / successful call</td></tr>
-        <tr><td>Standard</td><td>$0.60</td></tr>
-        <tr><td>Deep</td><td>$1.50</td></tr>
-        <tr><td>Quality-bar fail</td><td><strong>$0</strong></td></tr>
-        <tr><td>Prepaid packs</td><td>$10 / $25 / $50</td></tr>
-      </tbody>
-    </table>
+# Auth (either header)
+Authorization: Bearer YOUR_API_KEY
+# or
+X-API-Key: YOUR_API_KEY
 
-    <h2>Links</h2>
-    <p class="links">
-      <a href="https://x.com/research_mcp">X profile</a>
-      <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
-      <a href="https://research-mcp-mhh.fly.dev/health">Health</a>
-      <a href="https://smithery.ai/servers/research-mcp-hq/research-mcp">Smithery</a>
-    </p>
-    <p>Official Registry: <code>io.github.research-mcp-hq/research-mcp</code>. MCP API stays on Fly; this site is the homepage.</p>
+# Useful routes
+GET  /health
+GET  /billing/credits
+POST /billing/checkout   {"pack":"starter"|"standard"|"pro"}
+GET  /.well-known/mcp/server-card.json</pre>
+      </div>
+      <p class="note">Get a key via prepaid checkout on <a href="/pricing/#buy">Pricing</a>. Official Registry: <code>io.github.research-mcp-hq/research-mcp</code>.</p>
+    </div>
 
-    <footer>
-      research-mcp-hq · researchmcp.dev · brand aligned with @research_mcp · quotes may include page chrome; we do not claim Parallel/Exa synthesis.
+    <footer class="site-footer">
+      <div class="links">
+        <a href="/docs/">Contract</a>
+        <a href="/docs/tools/">Tools</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/changelog/">Changelog</a>
+        <a href="/legal/">Legal</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
+        <a href="https://x.com/research_mcp">@research_mcp</a>
+      </div>
+      <p>research-mcp-hq · researchmcp.dev · brand aligned with @research_mcp</p>
     </footer>
   </main>
+  <script src="/js/site.js"></script>
 </body>
 </html>

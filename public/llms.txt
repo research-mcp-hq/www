@@ -1,0 +1,25 @@
+# Research MCP
+> Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety. Miss the quote gate → $0.
+
+- Site: https://researchmcp.dev/
+- Contract: https://researchmcp.dev/docs/
+- Tools guide: https://researchmcp.dev/docs/tools/
+- Pricing: https://researchmcp.dev/pricing/
+- Changelog: https://researchmcp.dev/changelog/
+- Legal: https://researchmcp.dev/legal/
+- Full agent brief: https://researchmcp.dev/llms-full.txt
+- Schema: https://researchmcp.dev/docs/contract/schema.json
+- Schema (GitHub): https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/schema.json
+- Happy example: https://researchmcp.dev/docs/contract/examples/happy-research-brief.json
+- FAIL example: https://researchmcp.dev/docs/contract/examples/fail-gate.json
+- Server card: https://researchmcp.dev/.well-known/mcp/server-card.json
+- MCP endpoint: https://research-mcp-mhh.fly.dev/mcp
+- Health: https://research-mcp-mhh.fly.dev/health
+- GitHub: https://github.com/research-mcp-hq/research-mcp
+- X: https://x.com/research_mcp
+
+## Product
+Remote MCP. API key auth. Prepaid packs $10/$25/$50 (1000/2500/5000¢). Lite $0.25, standard $0.60, fail=$0. Deep = preview/$0 (not live-billed). Live tools: research_brief (quick/standard), source_lookup. compare_options: do not call (preview/$0).
+
+## schema_version
+2026-09-14 (also X-Research-MCP-Schema-Version). Server version 0.1.0.

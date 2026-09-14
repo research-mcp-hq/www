@@ -1,0 +1,81 @@
+# Research MCP — agent-readable brief
+schema_version: 2026-09-14
+server_version: 0.1.0
+homepage: https://researchmcp.dev/
+
+## Pitch
+Cited excerpt packs for agents choosing MCP hosts, auth, and tool-safety.
+Not a human chat product. Not a generic web synthesizer.
+Live path: search → fetch → quote gate.
+Billable only when density + confidence bar AND quotes verify on each claim's source_url.
+Miss the quote gate → $0 (meta.billable=false).
+
+## MCP endpoint
+# TODO after DNS: https://mcp.researchmcp.dev/mcp
+https://research-mcp-mhh.fly.dev/mcp
+
+Auth: Authorization: Bearer <api_key>  OR  X-API-Key: <api_key>
+
+## Buy packs (Stripe Payment Links)
+- starter $10 / 1000¢: https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00
+- standard $25 / 2500¢: https://buy.stripe.com/14A00k5xYgY74H32np3AY01
+- pro $50 / 5000¢: https://buy.stripe.com/fZu3cwd0qcHR7Tf4vx3AY02
+Success: Stripe → Fly /billing/success (one-time key reveal).
+Also: POST /billing/checkout {"pack":"starter"|"standard"|"pro"}
+Balance: GET /billing/credits
+
+## Meters
+- lite: $0.25 (source_lookup / research_brief quick)
+- standard: $0.60 (research_brief standard)
+- fail / sample / preview: $0
+- deep: preview only, $0, ENABLE_PREVIEW_TOOLS=1 required — NOT a live $1.50 SKU
+
+## Tools
+### research_brief — LIVE
+Call when you need cited, query-tied excerpt packs on AI infra / MCP / security (hosts, auth, tool-safety).
+Use depth=quick ($0.25) or depth=standard ($0.60).
+Do NOT call depth=deep unless preview flag (always $0).
+If quotes fail verification on source_url → refused, not billed.
+
+### source_lookup — LIVE
+Call when you have one URL or claim to fetch/verify. Lite $0.25.
+Do NOT use as open-web search or multi-source synthesis.
+
+### compare_options — PREVIEW / $0 / DO NOT CALL
+No live path (golden-only). Use research_brief instead.
+
+## Density bars
+- quick: ≥2 unique sources, ≥1 primary
+- standard: ≥4 unique, ≥2 primary
+- deep (preview): ≥6 unique, ≥3 primary + counter-arguments + gaps
+
+## Envelope (required fields)
+tldr, body, confidence, sources[], gaps[], as_of, schema_version
+Optional: meta {mode, billable}, fail_gate {reason, retryable}, claims[{claim, quote, source_url}], retrieved_at
+Charge path: meta.billable === true only.
+
+## Examples
+- Happy: https://researchmcp.dev/docs/contract/examples/happy-research-brief.json
+- FAIL: https://researchmcp.dev/docs/contract/examples/fail-gate.json
+- Schema: https://researchmcp.dev/docs/contract/schema.json
+
+## Privacy
+We log category mix (tool, topic bucket, host, billable vs fail) — not your questions.
+Not a vuln scanner. Not legal advice.
+
+## Sources note
+Quotes may include page chrome. We do not claim Parallel/Exa synthesis as the live path.
+
+## Install (Cursor)
+{
+  "mcpServers": {
+    "research-mcp": {
+      "url": "https://research-mcp-mhh.fly.dev/mcp",
+      "headers": { "Authorization": "Bearer YOUR_API_KEY" }
+    }
+  }
+}
+
+## Registry
+io.github.research-mcp-hq/research-mcp
+Server card: https://researchmcp.dev/.well-known/mcp/server-card.json

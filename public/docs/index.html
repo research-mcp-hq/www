@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contract — Research MCP</title>
+  <meta name="description" content="Published contract for Research MCP: schema_version 2026-09-14, shared envelope, happy + FAIL examples." />
+  <link rel="canonical" href="https://researchmcp.dev/docs/" />
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+  <link rel="describedby" href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/schema.json" />
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/" aria-label="Research MCP home" style="display:flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none">
+          <img src="/assets/avatar.jpg" width="36" height="36" alt="Research MCP logo" />
+          <span class="brand-name">Research MCP</span>
+        </a>
+        <a class="brand-handle" href="https://x.com/research_mcp">@research_mcp</a>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/docs/">Contract</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="https://github.com/research-mcp-hq/research-mcp">GitHub</a>
+        <a href="/pricing/#buy">Get key</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1>Contract</h1>
+    <p class="lead">schema_version <strong>2026-09-14</strong> · header <code>X-Research-MCP-Schema-Version</code></p>
+    <p>Caller-visible gate: <code>meta.billable</code>, <code>quotes_verified</code>, <code>quote_gate</code>, <code>fail_gate</code>. Only <code>meta.billable === true</code> is charged.</p>
+
+    <div class="card">
+      <h2 style="margin-top:0">Deep links (GitHub)</h2>
+      <ul>
+        <li><a href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/schema.json">schema.json</a> — also <a href="/docs/contract/schema.json">local copy</a></li>
+        <li><a href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/examples/happy-research-brief.json">happy-research-brief.json</a> — <a href="/docs/contract/examples/happy-research-brief.json">local</a></li>
+        <li><a href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/contract/examples/fail-gate.json">fail-gate.json</a> — <a href="/docs/contract/examples/fail-gate.json">local</a></li>
+        <li><a href="https://github.com/research-mcp-hq/research-mcp/blob/main/docs/TOOLS.md">TOOLS.md</a></li>
+      </ul>
+    </div>
+
+    <h2>Shared envelope (summary)</h2>
+    <div class="card copy-wrap">
+      <button type="button" class="copy-btn" data-copy="#envelope">Copy</button>
+      <pre id="envelope">{
+  "tldr": "string",
+  "body": {},
+  "confidence": "high | medium | low | unknown",
+  "sources": [{ "title", "url", "publisher", "accessed", "type", "supports", "retrieved_at?" }],
+  "gaps": ["string"],
+  "as_of": "YYYY-MM-DD",
+  "schema_version": "2026-09-14",
+  "meta": { "mode": "golden|sample|live", "billable": true },
+  "fail_gate": { "reason": "string", "retryable": false },
+  "claims": [{ "claim", "quote", "source_url" }],
+  "retrieved_at": "ISO-8601"
+}</pre>
+    </div>
+
+    <h2>Density bars</h2>
+    <div class="density">
+      <div class="card"><strong>quick</strong><p style="margin:.35rem 0 0">≥2 unique · ≥1 primary</p></div>
+      <div class="card"><strong>standard</strong><p style="margin:.35rem 0 0">≥4 unique · ≥2 primary</p></div>
+    </div>
+    <p class="note">Deep (preview): ≥6 unique · ≥3 primary + counter-arguments + gaps — always $0 with flag.</p>
+
+    <p><a href="/contract/">Also at /contract/</a> · <a href="/docs/tools/">Tools guide</a> · <a href="/">Home</a></p>
+
+    <footer class="site-footer">
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/legal/">Legal</a>
+        <a href="/llms.txt">llms.txt</a>
+      </div>
+    </footer>
+  </main>
+  <script src="/js/site.js"></script>
+</body>
+</html>
