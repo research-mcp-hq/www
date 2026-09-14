@@ -11,3 +11,14 @@
 ## Do not
 - Point Smithery `websiteUrl` here until HTTPS resolves.
 - Put API on this domain in v1 (API stays `research-mcp-mhh.fly.dev`).
+
+## Cloudflare deploy settings
+
+If the dashboard requires a deploy command (Workers & Pages create flow):
+
+- **Build command:** leave empty (or `exit 0`)
+- **Deploy command:** `npx wrangler deploy`
+- **Root directory:** `/` or empty
+- Do **not** put `/` in the build or deploy command fields
+
+`wrangler.toml` serves this folder as static assets under project name `researchmcp`.
