@@ -192,11 +192,17 @@ h3 {
 }
 .grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1rem;
 }
-@media (max-width: 720px) {
+.grid-2 > .example-panel,
+.grid-2 > .card {
+  min-width: 0;
+}
+@media (max-width: 1100px) {
   .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
   .brand-name { font-size: .92rem; }
 }
 .example-head {

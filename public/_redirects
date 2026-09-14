@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects to MCP origin (302: external hosts; 200 rewrite is for same-origin SPA)
+/health  https://mcp.researchmcp.dev/health  302
+/billing/success  https://mcp.researchmcp.dev/billing/success  302
+/billing/success/*  https://mcp.researchmcp.dev/billing/success/:splat  302
+/billing/credits  https://mcp.researchmcp.dev/billing/credits  302
+/billing/credits/*  https://mcp.researchmcp.dev/billing/credits/:splat  302

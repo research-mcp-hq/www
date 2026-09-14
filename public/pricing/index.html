@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing — Research MCP</title>
-  <meta name="description" content="Prepaid packs $10/$25/$50. Lite $0.25, standard $0.60, fail=$0. Deep is preview only." />
+  <meta name="description" content="Prepaid packs $10/$25/$50. Lite $0.25, standard $0.60, fail=$0." />
   <link rel="canonical" href="https://researchmcp.dev/pricing/" />
   <link rel="icon" href="/assets/icon.png" type="image/png" />
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
@@ -33,27 +33,31 @@
     <h1>Pricing</h1>
     <p class="lead">Prepaid packs. Successful calls debit the meter. Miss the quote gate → <strong>$0</strong>.</p>
 
-    <h2 id="buy">Buy a pack</h2>
-    <p class="muted">Stripe Checkout → key reveal on Fly <code>/billing/success</code>.</p>
+    <h2 id="buy">Get a key</h2>
+    <ol class="muted" style="padding-left:1.25rem">
+      <li><strong>Pay</strong> — buy a prepaid pack with Stripe Checkout.</li>
+      <li><strong>Key</strong> — copy your API key on the success page (<code>/billing/success</code> → <code>mcp.researchmcp.dev</code>).</li>
+      <li><strong>Paste</strong> — put the key in the install JSON on the <a href="/#install">homepage</a>.</li>
+    </ol>
     <div class="price-grid">
       <div class="card price-card">
         <h3>Starter</h3>
         <div class="amt">$10</div>
-        <p style="margin:0 0 .75rem">1000¢ credit</p>
+        <p style="margin:0 0 .75rem">1000¢ credit · ~40 lite or ~16 standard</p>
         <!-- BUY_STARTER_URL -->
         <a class="btn btn-primary" href="https://buy.stripe.com/cNi9AU4tU5fp3CZ8LN3AY00">Buy starter</a>
       </div>
       <div class="card price-card">
         <h3>Standard</h3>
         <div class="amt">$25</div>
-        <p style="margin:0 0 .75rem">2500¢ credit</p>
+        <p style="margin:0 0 .75rem">2500¢ credit · ~100 lite or ~41 standard</p>
         <!-- BUY_STANDARD_URL -->
         <a class="btn btn-primary" href="https://buy.stripe.com/14A00k5xYgY74H32np3AY01">Buy standard</a>
       </div>
       <div class="card price-card">
         <h3>Pro</h3>
         <div class="amt">$50</div>
-        <p style="margin:0 0 .75rem">5000¢ credit</p>
+        <p style="margin:0 0 .75rem">5000¢ credit · ~200 lite or ~83 standard</p>
         <!-- BUY_PRO_URL -->
         <a class="btn btn-primary" href="https://buy.stripe.com/fZu3cwd0qcHR7Tf4vx3AY02">Buy pro</a>
       </div>
@@ -67,7 +71,6 @@
           <tr><td>Lite</td><td>$0.25</td><td><code>source_lookup</code> / <code>research_brief</code> quick</td></tr>
           <tr><td>Standard</td><td>$0.60</td><td><code>research_brief</code> standard</td></tr>
           <tr><td>Fail / sample</td><td><strong>$0</strong></td><td><code>meta.billable=false</code> — quote gate, density, preview</td></tr>
-          <tr><td>Deep</td><td>$0</td><td><span class="badge badge-warn">preview · flag required</span> — not listed as a live $1.50 SKU</td></tr>
         </tbody>
       </table>
     </div>
